@@ -1,0 +1,15 @@
+{
+	"FirstName": "PwUser2",
+    "Salary": 40000,
+    "phoeNum": "369852",
+    "location": "pune",
+    "email": "pwUser1@gmail.com",
+    "age": 45,
+	"skills": [
+	     {
+	       "first": "NodeJS",
+	       "second": "AngularJS",
+	       "third": "ReactJS"
+	     }
+	   ]
+  }

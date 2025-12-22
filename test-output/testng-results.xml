@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-21T19:54:51 IST" name="Default suite" finished-at="2025-12-21T19:55:25 IST" duration-ms="33876">
+    <groups>
+    </groups>
+    <test started-at="2025-12-21T19:54:51 IST" name="Default test" finished-at="2025-12-21T19:55:25 IST" duration-ms="33876">
+      <class name="com.qa.pw.api.auth.BookingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.pw.api.auth.BookingTest@78691363]" started-at="2025-12-21T19:54:51 IST" name="setup" finished-at="2025-12-21T19:55:25 IST" duration-ms="33752" status="FAIL">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetchImpl(APIRequestContextImpl.java:152)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetch(APIRequestContextImpl.java:66)
+at com.microsoft.playwright.impl.APIRequestContextImpl.post(APIRequestContextImpl.java:208)
+at com.qa.pw.api.auth.BookingTest.setup(BookingTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:657)
+at org.testng.TestRunner.beforeRun(TestRunner.java:646)
+at org.testng.TestRunner.run(TestRunner.java:612)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="updateBookingTest()[pri:1, instance:com.qa.pw.api.auth.BookingTest@78691363]" started-at="2025-12-21T19:55:25 IST" name="updateBookingTest" finished-at="2025-12-21T19:55:25 IST" duration-ms="0" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetchImpl(APIRequestContextImpl.java:152)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetch(APIRequestContextImpl.java:66)
+at com.microsoft.playwright.impl.APIRequestContextImpl.post(APIRequestContextImpl.java:208)
+at com.qa.pw.api.auth.BookingTest.setup(BookingTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:657)
+at org.testng.TestRunner.beforeRun(TestRunner.java:646)
+at org.testng.TestRunner.run(TestRunner.java:612)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookingTest -->
+        <test-method signature="deleteBookingTest()[pri:2, instance:com.qa.pw.api.auth.BookingTest@78691363]" started-at="2025-12-21T19:55:25 IST" name="deleteBookingTest" finished-at="2025-12-21T19:55:25 IST" duration-ms="1" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetchImpl(APIRequestContextImpl.java:152)
+at com.microsoft.playwright.impl.APIRequestContextImpl.fetch(APIRequestContextImpl.java:66)
+at com.microsoft.playwright.impl.APIRequestContextImpl.post(APIRequestContextImpl.java:208)
+at com.qa.pw.api.auth.BookingTest.setup(BookingTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:657)
+at org.testng.TestRunner.beforeRun(TestRunner.java:646)
+at org.testng.TestRunner.run(TestRunner.java:612)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\progress.js:68:28)
+    at APIRequestContextDispatcher._runCommand (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\PVHASINI\AppData\Local\Temp\playwright-java-12405344854825830007\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - → POST https://restful-booker.herokuapp.com/auth
+-     - user-agent: Playwright/1.56.1 (x64; windows 10.0) java/21
+-     - accept: */*
+-     - accept-encoding: gzip,deflate,br
+-     - Content-Type: application/json
+-     - content-length: 63
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookingTest -->
+      </class> <!-- com.qa.pw.api.auth.BookingTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
