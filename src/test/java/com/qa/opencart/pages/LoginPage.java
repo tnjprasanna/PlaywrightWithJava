@@ -4,9 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 public class LoginPage {
-	
-	
-	
+
 	private Page page;
 	
 	private String email = "input#input-email";

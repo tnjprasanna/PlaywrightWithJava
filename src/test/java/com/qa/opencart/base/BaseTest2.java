@@ -3,38 +3,34 @@ package com.qa.opencart.base;
 import java.io.FileNotFoundException;
 import java.util.Properties;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
-import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Page;
 import com.qa.opencart.factory.PlaywrightFactory;
 import com.qa.opencart.pages.HomePage;
 import com.qa.opencart.pages.LoginPage;
 
-public class BaseTest {
+public class BaseTest2 {
 	
-	protected Browser browser;
-	protected Page page;
+	PlaywrightFactory pf;
+	Page page;
+	
 	protected Properties prop;
 	protected HomePage homePage;
 	protected LoginPage loginPage;
-	PlaywrightFactory pf;
-	//Page page;
 	
-    @BeforeClass
+	//@BeforeTest
 	public void setup() throws FileNotFoundException {
 		pf = new PlaywrightFactory();
 		prop = pf.init_pop();
 		page = pf.initBrowser(prop);
 		homePage = new HomePage(page);
-		loginPage = new LoginPage(page);
+	
 	}
 	
 	
-    @AfterClass
+	//@AfterTest
 	public void tearDown() {
 		page.context().browser().close();
 	}
