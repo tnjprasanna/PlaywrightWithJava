@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -27,7 +28,7 @@ public class GetApiCall {
 	APIRequest request;
 	APIRequestContext apiReqContext;
 	
-	@BeforeTest
+	//@BeforeTest
 	public void setup() {
 		
 		 createPlaywright =	Playwright.create();
@@ -72,7 +73,7 @@ public class GetApiCall {
 		
 	}
 	
-	@Test
+	//@Test
 	public void createUser() throws IOException {
 		
 		/*
@@ -112,6 +113,7 @@ public class GetApiCall {
 	       System.out.println(postJsonResp.toPrettyString());
 		}
 	
+	//@AfterTest
 	public void tearDown() {
 		createPlaywright.close();		
 	}

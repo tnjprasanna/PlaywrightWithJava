@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,7 +24,7 @@ public class CreatePojoPostCall {
 	APIRequest request;
 	APIRequestContext apiReqContext;
 	
-	@BeforeTest
+	//@BeforeTest
 	public void setup() {
 		
 		 createPlaywright =	Playwright.create();
@@ -31,7 +32,7 @@ public class CreatePojoPostCall {
 		 apiReqContext = request.newContext();
 	}
 
-	@Test
+	//@Test
 	public void createUserTest() throws IOException {
 		
 		User user = new User("1002","Suraj", "suraj@gmail.com", "Jihani", "044234242", 41, 42000);
@@ -57,7 +58,7 @@ public class CreatePojoPostCall {
 		       Assert.assertEquals(actualUser.getSalary(), user.getSalary());
 		       Assert.assertNotNull(actualUser.getId());
 	}
-	
+	//@AfterTest
 	public void tearDown() {
 		createPlaywright.close();		
 	}

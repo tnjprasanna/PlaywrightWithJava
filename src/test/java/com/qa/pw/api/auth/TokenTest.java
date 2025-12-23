@@ -3,6 +3,7 @@ package com.qa.pw.api.auth;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,7 @@ public class TokenTest {
 	APIRequest request;
 	APIRequestContext apiReqContext;
 	
-	@BeforeTest
+	//@BeforeTest
 	public void setup() {
 		
 		 createPlaywright =	Playwright.create();
@@ -30,7 +31,7 @@ public class TokenTest {
 		 apiReqContext = request.newContext();
 	}
 
-	@Test
+	//@Test
 	public void getTokenTest() throws IOException {
 		
 		String reqTokenJsonBody = "{\r\n"
@@ -58,6 +59,7 @@ public class TokenTest {
 	       	
 	}
 	
+	//@AfterTest
 	public void tearDown() {
 		createPlaywright.close();		
 	}

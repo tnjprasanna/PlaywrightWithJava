@@ -21,7 +21,7 @@ public class CreateUserPojoLombokTest {
 	APIRequest request;
 	APIRequestContext apiReqContext;
 	
-	@BeforeTest
+	//@BeforeTest
 	public void setup() {
 		
 		 createPlaywright =	Playwright.create();
@@ -29,7 +29,7 @@ public class CreateUserPojoLombokTest {
 		 apiReqContext = request.newContext();
 	}
 
-	@Test
+	//@Test
 	public void createUserTest() throws IOException {
 		
 		

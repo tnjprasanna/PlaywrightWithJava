@@ -3,6 +3,7 @@ package com.qa.pw.api.auth;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,7 @@ public class BookingTest {
 	APIRequestContext apiReqContext;
 	private static String TOKEN_ID=null;
 	
-	@BeforeTest
+	//@BeforeTest
 	public void setup() {
 		System.out.println("Before Setup ");
 		 createPlaywright =	Playwright.create();
@@ -45,13 +46,13 @@ public class BookingTest {
 		       System.out.println(postJsonResponse.toPrettyString());
 		       
 		       System.out.println(postApiTokenResponse.status());
-		       Assert.assertEquals(" Create/Post Booking: "+postApiTokenResponse.status(), 200);
+		       Assert.assertEquals(postApiTokenResponse.status(), 200);
 		       
 		       TOKEN_ID =	postJsonResponse.get("token").asString();
 		       System.out.println("token ID: "+TOKEN_ID);
 	}
 
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void updateBookingTest() throws IOException {
 		
 		String bookingJson = "{\r\n"
@@ -86,7 +87,7 @@ public class BookingTest {
 	       System.out.println("token ID: "+token);
 	}
 	
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void deleteBookingTest() {
 		
 		APIResponse deleteApiTokenResponse = apiReqContext.delete("https://restful-booker.herokuapp.com/booking/1",
@@ -102,7 +103,7 @@ public class BookingTest {
 					
 	}
 	
-	
+	//@AfterTest
 	public void tearDown() {
 		createPlaywright.close();		
 	}

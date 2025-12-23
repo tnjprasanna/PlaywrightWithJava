@@ -3,6 +3,7 @@ package com.qa.pw.api;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -19,7 +20,7 @@ public class ApiDisposeTest {
 	APIRequest request;
 	APIRequestContext apiReqContext;
 	
-	@BeforeTest
+	//@BeforeTest
 	public void setup() {
 		
 		 createPlaywright =	Playwright.create();
@@ -57,7 +58,7 @@ public class ApiDisposeTest {
 		
 		
 	}
-	
+	//@AfterTest
 	public void tearDown() {
 		createPlaywright.close();		
 	}
