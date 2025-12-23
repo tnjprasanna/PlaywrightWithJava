@@ -69,11 +69,6 @@
 		    <scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>RestAPI</groupId>
-			<artifactId>Restassured</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
   </dependencies>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
