@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven 'Apache_Maven'   // match the actual Maven installation name in Jenkins
+        maven 'Apache_Maven'
     }
     
     stages {
@@ -14,7 +14,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post {
                 success {
@@ -33,7 +33,7 @@ pipeline {
         stage('Regression Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regressions.xml"
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regressions.xml"
                 }
             }
         }
