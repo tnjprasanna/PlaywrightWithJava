@@ -1,0 +1,58 @@
+services:
+  selenium-hub:
+    image: selenium/hub:4.0.0
+    ports:
+      - "4444:4444"
+
+  chromium:
+    image: selenium/node-chrome:4.0.0
+    shm_size: 2gb
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      SE_NODE_MAX_SESSION: 3
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
+      SE_NODE_GRID_URL: http://localhost:4444
+    
+  firefox:
+    image: selenium/node-firefox:4.0.0
+    shm_size: 2gb
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      SE_NODE_MAX_SESSION: 3
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
+      SE_NODE_GRID_URL: http://localhost:4444
+
+  edge:
+    image: selenium/node-edge:4.0.0
+    shm_size: 2gb
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      SE_NODE_MAX_SESSION: 3
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
+      SE_NODE_GRID_URL: http://localhost:4444
+
+  mock-api:
+    image: wiremock/wiremock:latest
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/__admin/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  playwright-tests:
+    image: mcr.microsoft.com/playwright/java:v1.42.0
+    volumes:
+      - ./tests:/tests
+    working_dir: /tests
+    depends_on:
+      - mock-api
+    entrypoint: ["./wait-for.sh", "http://mock-api:8080/__admin/health", "mvn", "test"]
