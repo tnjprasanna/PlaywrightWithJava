@@ -5,6 +5,14 @@ pipeline
     tools{
     	maven 'maven'
         }
+        stages {
+    stage('Checkout') {
+      steps {
+        git branch: 'main', url: git 'https://github.com/tnjprasanna/PlaywrightWithJava'
+      }
+    }
+  }
+
 
     stages 
     {
@@ -12,7 +20,7 @@ pipeline
         {
             steps
             {
-                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/tnjprasanna/PlaywrightWithJava'
                  sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post 
